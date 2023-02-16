@@ -52,7 +52,7 @@ HTML, JavaScript and CSS
 
 > click the link below to chekout the website.
 
-- [Live Demo Link](https://fuadmoin.github.io/Portfolio/)
+- [Live Demo Link](https://fuadmoin.github.io/English-Without-Border/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,7 +114,7 @@ If you like this project please consider leaving a review.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 The design of this project is based on this [design](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015) in [Behance](https://www.behance.net/)
-created by [`Cindy Shin`] (https://www.behance.net/adagio07).
+created by [Cindy Shin](https://www.behance.net/adagio07).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
