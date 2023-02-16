@@ -1,0 +1,807 @@
+@font-face {
+  font-family: "cocogoose";
+  src: url("../fonts/Cocogoose_trial.otf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Regular.ttf");
+  font-style: normal;
+}
+$background-color: #d3d3d3;
+$title-color: #ec5242;
+$text-color:  #272a31;
+$header-font-family: "cocogoose", "sans-serif";
+$text-font-family: 'Lato', sans-serif;
+$font-weights: (
+  "regular" : 400,
+  "medium" : 500,
+  "bold" : 700,
+  "heavy" : 900,
+);
+
+@function weight($weight-name) {
+  @return map-get($font-weights , $weight-name );
+}
+
+@mixin flexcenter($direction) {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: $direction;
+}
+
+@mixin tablet {
+  @media (min-width: 400px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+body {
+  font-family: $text-font-family;
+  font-size: 12px;
+  // background: #F7F7F7 ;
+  color: #484648;
+
+  .desktopnav {
+    display: none;
+    top: -7px;
+    position: relative;
+
+    @include desktop() {
+      @include flexcenter(column);
+    }
+
+    width: 100%;
+    height: 100px;
+
+    .socialmedia {
+      background: black;
+      color: white;
+      height: 30px;
+      width: 100%;
+      font-size: 12px;
+
+      @include flexcenter(row);
+
+      align-items: center;
+      justify-content: flex-end;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .logout {
+        position: absolute;
+        right: 20%;
+      }
+
+      .facebook {
+        position: absolute;
+        right: 520px;
+
+        img {
+          background: white;
+        }
+      }
+
+      .twitter {
+        position: absolute;
+        right: 490px;
+        top: 8px;
+      }
+
+      .english {
+        position: absolute;
+        right: 425px;
+      }
+
+      .mypage {
+        position: absolute;
+        right: 360px;
+      }
+    }
+
+    .logoGroup {
+      font-size: 15px;
+      background: white;
+      height: 70px;
+      width: 100%;
+      color: $text-color;
+
+      @include flexcenter(row);
+
+      align-items: center;
+      justify-content: flex-end;
+
+      a {
+        text-decoration: none;
+      }
+
+      .logo {
+        position: absolute;
+        left: 100px;
+        width: 100px;
+        height: 50px;
+      }
+
+      .about {
+        position: absolute;
+        right: 1030px;
+        color: #ec5242;
+      }
+
+      .program {
+        position: absolute;
+        right: 880px;
+      }
+
+      .join {
+        position: absolute;
+        right: 750px;
+      }
+
+      .sponsor {
+        position: absolute;
+        right: 600px;
+      }
+
+      .news {
+        position: absolute;
+        right: 460px;
+      }
+
+      .resource {
+        position: absolute;
+        right: 250px;
+        width: 100px;
+        height: 50px;
+        border: solid 4px #ec5242;
+        color: #ec5242;
+      }
+    }
+  }
+
+  .main {
+    width: 291px;
+    height: 380px;
+    background: #f7f7f7;
+    position: relative;
+    top: 0;
+    color: $text-color;
+
+    @include flexcenter(column);
+
+    padding: 32px 50px 145px 34px;
+
+    .navigation {
+      left: 12px;
+      position: relative;
+      top: 0;
+
+      .menu {
+        width: 40px;
+        height: 30px;
+      }
+
+      @include desktop() {
+        display: none;
+      }
+    }
+
+    .introduction {
+      order: 1;
+      position: relative;
+      top: 32px;
+      left: 0;
+      color: $title-color;
+      line-height: 34px;
+
+      .title {
+        width: 291px;
+        font-size: 22px;
+        font-weight: weight(regular);
+        text-align: center;
+
+        @include tablet {
+          width: 77.6%;
+        }
+
+        @include desktop() {
+          display: none;
+        }
+      }
+
+      .subtitle {
+        top: -17px;
+        position: relative;
+        font-weight: weight(heavy);
+        font-size: 25px;
+        text-align: center;
+        font-family: $header-font-family;
+        width: 291px;
+
+        @include tablet {
+          width: 77.6%;
+        }
+
+        @include desktop() {
+          width: 77.6%;
+          font-size: 45px;
+          line-height: 50px;
+          top: 50px;
+          left: 35%;
+        }
+      }
+
+      .pink {
+        display: none;
+        position: relative;
+        top: 25px;
+        left: 230px;
+        background-color: $title-color;
+        border-style: none;
+        height: 1px;
+        width: 25px;
+
+        @include desktop {
+          display: block;
+        }
+      }
+    }
+
+    .content {
+      position: relative;
+      top: 80px;
+      order: 2;
+
+      .descriptioncontainer {
+        position: relative;
+        line-height: 25px;
+        top: -50px;
+        max-height: 180px;
+        text-align: center;
+        background-color: white;
+        width: 291px;
+        border: 1px solid rgb(197, 194, 194);
+
+        @include tablet {
+          width: 77.6%;
+        }
+
+        @include desktop() {
+          width: 50%;
+          left: 20%;
+          top: 0;
+        }
+
+        .description {
+          @include desktop() {
+            display: none;
+          }
+        }
+
+        .discription2 {
+          display: none;
+
+          @include desktop() {
+            display: block;
+          }
+        }
+      }
+
+      .titlecontainer {
+        justify-content: center;
+        position: relative;
+        top: -40px;
+        left: 18px;
+        width: 252px;
+        text-align: center;
+
+        @include tablet {
+          width: 77.6%;
+        }
+
+        @include desktop() {
+          width: 77.6%;
+          top: 10px;
+          left: 5%;
+        }
+
+        .title {
+          font-size: 12px;
+          line-height: 20px;
+        }
+
+        .skill {
+          position: relative;
+          top: -8px;
+          font-size: 12px;
+          font-weight: weight(bold);
+        }
+
+        .hrline {
+          position: relative;
+          width: 120px;
+          top: -20px;
+          height: 1px;
+        }
+      }
+    }
+
+    @include tablet {
+      max-height: 380px;
+      width: 77.6%;
+    }
+
+    @include desktop() {
+      padding: 0;
+      width: 100%;
+      height: 560px;
+    }
+  }
+
+  .seepast {
+    // background: red;
+    width: 335px;
+
+    @include tablet {
+      width: 89.34%;
+    }
+
+    @include desktop {
+      width: 100%;
+      height: 710px;
+      padding: 20px 0 0 0;
+    }
+
+    padding: 20px;
+
+    .content {
+      width: 330px;
+
+      @include tablet {
+        width: 88%;
+      }
+
+      @include desktop {
+        width: 100%;
+        padding: 0;
+      }
+
+      @include flexcenter(column);
+
+      .commons {
+        font-size: 18px;
+        font-weight: weight(bold);
+        position: relative;
+        width: 200px;
+        left: 25%;
+        text-align: center;
+
+        @include tablet {
+          width: 53.34%;
+        }
+
+        @include desktop {
+          width: 53.34%;
+          left: 20%;
+          font-size: 20px;
+        }
+      }
+
+      .pink {
+        position: relative;
+        top: -10px;
+        left: 15px;
+        background-color: $title-color;
+        border-style: none;
+        height: 1px;
+        width: 25px;
+
+        @include desktop() {
+          left: -40px;
+        }
+      }
+
+      .descrption {
+        position: relative;
+        left: 8%;
+        width: 260px;
+        top: -10px;
+        text-align: center;
+
+        @include tablet {
+          width: 69.34%;
+        }
+
+        @include desktop {
+          display: none;
+        }
+      }
+
+      .descrption2 {
+        position: relative;
+        left: 8%;
+        top: -10px;
+        text-align: center;
+        display: none;
+
+        @include desktop {
+          display: block;
+          width: 49.34%;
+          left: 25%;
+        }
+      }
+
+      .imagecontainer {
+        border: 1px solid rgb(197, 194, 194);
+        padding: 20px 40px;
+        height: 100px;
+        width: 245px;
+
+        @include tablet {
+          width: 65.34%;
+        }
+
+        @include desktop {
+          left: 40%;
+        }
+
+        position: relative;
+        top: 10px;
+
+        img {
+          width: 245px;
+          height: 100px;
+
+          @include tablet {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .divider {
+      position: relative;
+      top: 35px;
+      width: 335px;
+
+      @include desktop {
+        width: 100%;
+      }
+
+      left: 0;
+      border-style: none;
+      height: 1px;
+      background: rgb(197, 194, 194);
+    }
+
+    .past {
+      padding: 30px 20px;
+      width: 315px;
+
+      @include tablet {
+        width: 84%;
+      }
+
+      @include desktop {
+        width: 54%;
+      }
+
+      left: -20px;
+      position: relative;
+      top: 30px;
+
+      .title2 {
+        font-weight: weight(bold);
+        font-size: 18px;
+        position: relative;
+        left: 40px;
+
+        @include desktop {
+          left: 75%;
+        }
+      }
+
+      .pink {
+        position: relative;
+        top: -10px;
+        left: 0;
+
+        @include desktop {
+          left: 43%;
+        }
+
+        background-color: $title-color;
+        border-style: none;
+        height: 1px;
+        width: 25px;
+      }
+
+      .imgdescription {
+        position: relative;
+        left: 10px;
+        background: white;
+        width: 305px;
+
+        @include tablet {
+          width: 81.34%;
+        }
+
+        @include desktop {
+          left: 50%;
+          width: 81.34%;
+        }
+
+        text-align: center;
+      }
+
+      .career {
+        background: linear-gradient(0deg, rgba(203, 5, 5, 0.5), rgba(152, 6, 6, 0.5)), url(../img/carrier.png);
+        background-size: cover;
+        height: 180px;
+        width: 315px;
+        position: relative;
+
+        @include tablet {
+          width: 84%;
+          left: 10%;
+        }
+
+        @include desktop {
+          left: 50%;
+        }
+
+        top: 18px;
+
+        @include flexcenter(column);
+
+        color: white;
+
+        .coursetitle {
+          position: relative;
+          top: 50px;
+          font-weight: weight(bold);
+          font-size: 18px;
+          left: 22%;
+        }
+
+        .coursesubtitle {
+          left: 0;
+          position: relative;
+          text-align: center;
+          top: 60px;
+        }
+      }
+
+      .Perfectly {
+        background: linear-gradient(0deg, rgba(203, 5, 5, 0.5), rgba(152, 6, 6, 0.5)), url(../img/perfectly.png);
+        background-size: cover;
+        height: 180px;
+        width: 315px;
+
+        @include tablet {
+          width: 84%;
+          left: 10%;
+        }
+
+        @include desktop {
+          left: 92%;
+          top: -162px;
+        }
+
+        position: relative;
+        top: 35px;
+
+        @include flexcenter(column);
+
+        color: white;
+
+        .coursetitle {
+          position: relative;
+          top: 50px;
+          font-weight: weight(bold);
+          font-size: 18px;
+          left: 22%;
+        }
+
+        .coursesubtitle {
+          left: 0;
+          position: relative;
+          text-align: center;
+          top: 60px;
+        }
+      }
+    }
+  }
+
+  footer {
+    @include flexcenter(column);
+
+    position: relative;
+    top: 50px;
+    width: 375px;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include desktop {
+      width: 100%;
+    }
+
+    .black {
+      background: $text-color;
+      height: 194px;
+      width: 100%;
+
+      @include desktop {
+        display: none;
+      }
+
+      font-size: 24px;
+      color: $background-color;
+
+      .partner {
+        small {
+          position: relative;
+          left: 150px;
+
+          @include tablet {
+            left: 40%;
+          }
+
+          top: 22px;
+          font-size: 24px;
+        }
+
+        hr {
+          position: relative;
+          left: 0;
+
+          @include tablet {
+            left: -4.7%;
+          }
+
+          background-color: $title-color;
+          height: 1px;
+          top: 22px;
+          width: 60px;
+          border-style: hidden;
+        }
+      }
+
+      .mozilla {
+        position: relative;
+        top: 26px;
+
+        .moz {
+          margin-left: 40px;
+
+          @include tablet {
+            margin-left: 18.67%;
+          }
+        }
+
+        .google {
+          margin-left: 40px;
+
+          @include tablet {
+            margin-left: 18.67%;
+          }
+
+          color: #9a9898;
+        }
+
+        .naver {
+          margin-left: 40px;
+
+          @include tablet {
+            margin-left: 18.67%;
+          }
+
+          color: #989696;
+          font-weight: weight(heavy);
+          font-family: $header-font-family;
+        }
+      }
+
+      .daumkakao {
+        position: relative;
+        top: 26px;
+        font-size: 18px;
+        color: #9a9898;
+      }
+
+      .daum {
+        margin-left: 84px;
+
+        @include tablet {
+          margin-left: 32.4%;
+        }
+      }
+
+      .airbnb {
+        margin-left: 36px;
+
+        @include tablet {
+          margin-left: 9.6%;
+        }
+
+        .bnb {
+          position: relative;
+          top: 6px;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    .creative {
+      @include desktop {
+        width: 100%;
+        background: $text-color;
+        color: white;
+        height: 120px;
+        padding-top: 30px;
+      }
+
+      width: 100%;
+      font-size: 12px;
+
+      @include flexcenter(row);
+
+      height: 100px;
+
+      .create {
+        position: relative;
+        top: 28px;
+        margin-left: 40px;
+        font-size: 15px;
+        font-weight: weight(bold);
+        color: black;
+
+        @include desktop {
+          left: 20%;
+          color: #d3d3d3;
+          font-size: 20px;
+          line-height: 20px;
+        }
+
+        line-height: 10px;
+
+        .copy {
+          position: relative;
+          top: 3px;
+          width: 15px;
+          height: 15px;
+
+          @include desktop {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      .create2 {
+        position: relative;
+        top: 30px;
+        left: 40px;
+        color: #9a9898;
+
+        @include desktop {
+          left: 22%;
+          top: 40px;
+        }
+      }
+    }
+  }
+}

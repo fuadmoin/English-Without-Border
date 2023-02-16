@@ -1,0 +1,861 @@
+@font-face {
+  font-family: "cocogoose";
+  src: url("../fonts/Cocogoose_trial.otf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Regular.ttf");
+  font-style: normal;
+}
+$background-color: #d3d3d3;
+$title-color: #ec5242;
+$text-color:  #272a31;
+$header-font-family: "cocogoose", "sans-serif";
+$text-font-family: 'Lato', sans-serif;
+$font-weights: (
+  "regular" : 400,
+  "medium" : 500,
+  "bold" : 700,
+  "heavy" : 900,
+);
+
+@function weight($weight-name) {
+  @return map-get($font-weights , $weight-name );
+}
+
+@mixin flexcenter($direction) {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: $direction;
+}
+
+@mixin tablet {
+  @media (min-width: 400px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+body {
+  font-family: $text-font-family;
+  font-size: 12px;
+
+  .desktopnav {
+    display: none;
+    top: -7px;
+    position: relative;
+
+    @include desktop() {
+      @include flexcenter(column);
+    }
+
+    width: 100%;
+    height: 100px;
+
+    .socialmedia {
+      background: black;
+      color: white;
+      height: 30px;
+      width: 100%;
+      font-size: 12px;
+
+      @include flexcenter(row);
+
+      align-items: center;
+      justify-content: flex-end;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .logout {
+        position: absolute;
+        right: 20%;
+      }
+
+      .facebook {
+        position: absolute;
+        right: 520px;
+
+        img {
+          background: white;
+        }
+      }
+
+      .twitter {
+        position: absolute;
+        right: 490px;
+        top: 8px;
+      }
+
+      .english {
+        position: absolute;
+        right: 425px;
+      }
+
+      .mypage {
+        position: absolute;
+        right: 360px;
+      }
+    }
+
+    .logoGroup {
+      font-size: 15px;
+      background: white;
+      height: 70px;
+      width: 100%;
+      color: $text-color;
+
+      @include flexcenter(row);
+
+      align-items: center;
+      justify-content: flex-end;
+
+      a {
+        text-decoration: none;
+      }
+
+      .logo {
+        position: absolute;
+        left: 100px;
+        width: 100px;
+        height: 50px;
+      }
+
+      .about {
+        position: absolute;
+        right: 1030px;
+      }
+
+      .program {
+        position: absolute;
+        right: 880px;
+      }
+
+      .join {
+        position: absolute;
+        right: 750px;
+      }
+
+      .sponsor {
+        position: absolute;
+        right: 600px;
+      }
+
+      .news {
+        position: absolute;
+        right: 460px;
+      }
+
+      .resource {
+        position: absolute;
+        right: 250px;
+        width: 100px;
+        height: 50px;
+        border: solid 4px #ec5242;
+        color: #ec5242;
+      }
+    }
+  }
+
+  .main {
+    width: 291px;
+    height: 434px;
+    background-size: cover;
+    background-color: #f7f7f7;
+    color: $text-color;
+
+    @include flexcenter(column);
+
+    padding: 32px 50px 145px 34px;
+
+    .navigation {
+      left: 12px;
+      position: relative;
+      top: 0;
+
+      .humberger {
+        width: 40px;
+        height: 30px;
+      }
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .introduction {
+      order: 1;
+      position: relative;
+      top: 32px;
+      left: 0;
+      color: $title-color;
+      line-height: 34px;
+
+      .title {
+        font-size: 22px;
+        font-weight: weight(regular);
+
+        @include tablet {
+          width: 77.6%;
+        }
+
+        @include desktop {
+          left: 34%;
+          top: 50px;
+          font-size: 34px;
+          position: relative;
+        }
+      }
+
+      .subtitle {
+        background:
+          linear-gradient(
+            50deg,
+            rgb(186, 7, 7) 20%,
+            rgb(242, 132, 132) 50%
+          );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @include tablet {
+          width: 77.6%;
+        }
+
+        @include desktop() {
+          width: 47.6%;
+          font-size: 45px;
+          line-height: 50px;
+          top: 30px;
+          left: 35%;
+        }
+
+        top: -17px;
+        position: relative;
+        font-weight: weight(heavy);
+        font-size: 30px;
+        text-align: start;
+        font-family: $header-font-family;
+      }
+    }
+
+    .content {
+      position: relative;
+      top: 70px;
+      order: 2;
+
+      div {
+        position: relative;
+        top: -50px;
+        max-height: 120px;
+        align-content: center;
+        border: 3px solid white;
+
+        @include tablet {
+          width: 77.6%;
+        }
+
+        @include desktop() {
+          width: 30%;
+          left: 20%;
+          top: -15px;
+          border: 5px solid white;
+        }
+
+        .description {
+          position: relative;
+          left: 10px;
+        }
+      }
+
+      .title {
+        font-family: $header-font-family;
+        font-size: 24px;
+        position: relative;
+        top: -50px;
+        line-height: 25px;
+
+        @include tablet {
+          width: 77.6%;
+        }
+
+        @include desktop {
+          width: 77.6%;
+          top: 0;
+          left: 18%;
+        }
+      }
+
+      .skill {
+        position: relative;
+        top: -60px;
+        font-size: 18px;
+
+        @include tablet {
+          width: 77.6%;
+        }
+
+        @include desktop {
+          width: 77.6%;
+          top: -10px;
+          left: 18%;
+        }
+      }
+    }
+
+    @include tablet {
+      // max-height: 380px;
+      width: 77.6%;
+    }
+
+    @include desktop() {
+      padding: 0;
+      width: 100%;
+      height: 650px;
+    }
+  }
+
+  .mainProgram {
+    position: relative;
+    background: url(../img/mainProgramBg.png);
+    padding: 32px 15px 37px 15px;
+    width: 345px;
+    top: 13px;
+    // height: 200px;
+    color: $background-color;
+
+    @include tablet {
+      // max-height: 380px;
+      width: 77.6%;
+    }
+
+    @include desktop() {
+      padding: 0;
+      width: 100%;
+      height: 550px;
+    }
+
+    @include flexcenter(column);
+
+    .programs {
+      top: 0;
+
+      @include tablet {
+        width: 100%;
+      }
+
+      @include desktop {
+        width: 10%;
+        position: relative;
+        left: 45%;
+      }
+
+      .main-Program {
+        position: relative;
+        left: 130px;
+        font-size: 20px;
+
+        @include tablet {
+
+          // width:77.6% ;
+        }
+
+        @include desktop {
+          left: 45%;
+          top: 50px;
+        }
+      }
+
+      .pink {
+        position: relative;
+        left: 130px;
+        background-color: $title-color;
+        height: 1px;
+        top: -13px;
+        border-style: hidden;
+
+        @include tablet {
+          width: 40px;
+        }
+
+        @include desktop {
+          left: 20%;
+          width: 40px;
+          top: 40px;
+        }
+      }
+    }
+
+    .programList {
+      position: relative;
+      top: 6px;
+
+      @include flexcenter(column);
+
+      @include tablet {
+        // width: 100%;
+      }
+
+      @include desktop {
+        @include flexcenter(row);
+
+        width: 70%;
+        padding: 0 15%;
+      }
+
+      .list2 {
+        margin-bottom: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 18px 18px 20px 23px;
+        height: 60px;
+
+        @include tablet {
+          max-height: 60px;
+        }
+
+        @include desktop {
+          @include flexcenter(column);
+
+          width: 100%;
+
+          // background: rgba(255,255,255,.05);
+          top: 75px;
+          position: relative;
+          height: 170px;
+          margin-right: 8px;
+          align-items: center;
+        }
+
+        @include flexcenter(row);
+
+        img {
+          width: 35px;
+          height: 35px;
+
+          @include desktop {
+            width: 45px;
+          }
+        }
+
+        .course {
+          color: $title-color;
+          margin-left: 17px;
+          position: relative;
+          top: 5px;
+          font-size: 17px;
+          font-weight: weight(bold);
+
+          @include desktop {
+            top: 17px;
+            text-align: center;
+          }
+        }
+
+        p {
+          margin-left: 17px;
+          position: relative;
+          top: -15px;
+          font-size: 12px;
+          text-align: start;
+
+          @include desktop {
+            top: 17px;
+          }
+        }
+      }
+
+      .list2:hover,
+      .list2:focus {
+        border: 4px solid $background-color;
+      }
+
+      .join {
+        position: relative;
+        top: 30px;
+        width: 235px;
+        background-color: $title-color;
+        left: 50px;
+        border-style: hidden;
+        height: 68px;
+        margin-bottom: 37px;
+
+        @include desktop {
+          display: none;
+        }
+      }
+
+      .seewhole {
+        display: none;
+        font-size: 14px;
+        position: absolute;
+        left: 45%;
+        width: 200px;
+        top: 350px;
+
+        @include desktop {
+          display: block;
+        }
+      }
+
+      .seehole {
+        display: none;
+        height: 1px;
+        background: $background-color;
+        width: 180px;
+        left: 45%;
+        top: 375px;
+        border-style: none;
+        position: absolute;
+
+        @include desktop {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .featured {
+    position: relative;
+    top: 13px;
+
+    @include flexcenter(column);
+
+    width: 316px;
+    padding: 32px 32px 70px 27px;
+
+    @include tablet {
+      // width: 100%;
+    }
+
+    @include desktop {
+      padding: 0;
+      width: 100%;
+      top: 50px;
+    }
+
+    .teachersName {
+      @include tablet {
+        // width: 100%;
+      }
+
+      @include desktop {
+        padding: 0;
+        width: 10%;
+        position: relative;
+        left: 40%;
+      }
+
+      .main-Program {
+        @include tablet {
+          //
+        }
+
+        @include desktop {
+          padding: 0;
+          width: 100%;
+        }
+
+        position: relative;
+        left: 130px;
+        font-size: 20px;
+      }
+
+      .pink {
+        @include tablet {
+          // width: 100%;
+        }
+
+        @include desktop {
+          padding: 0;
+          width: 40px;
+          left: 100px;
+        }
+
+        position: relative;
+        left: 130px;
+        background-color: $title-color;
+        height: 1px;
+        top: -13px;
+        border-style: hidden;
+      }
+    }
+
+    .programList {
+      @include flexcenter(column);
+
+      position: relative;
+      top: 30px;
+      width: 316px;
+
+      @include desktop {
+        padding: 0 20%;
+        width: 60%;
+
+        @include flexcenter(row);
+      }
+
+      .list {
+        @include flexcenter(row);
+
+        margin-bottom: 26px;
+
+        @include desktop {
+          margin-left: 100px;
+          margin-bottom: 40px;
+        }
+
+        .imgcontainer {
+          width: 96px;
+          height: 96px;
+          background-image: url(../img/blackandwhite.png);
+          background-repeat: no-repeat;
+          background-position: left top;
+          background-size: 45px 45px;
+
+          img {
+            top: 10px;
+            width: 100px;
+            height: 100px;
+            left: 13px;
+            position: relative;
+
+            @include desktop {
+              width: 150px;
+            }
+          }
+        }
+
+        .content {
+          position: relative;
+          left: 34px;
+
+          @include desktop {
+            left: 84px;
+          }
+
+          max-height: 160px;
+
+          .name {
+            font-size: 17px;
+            font-weight: weight(bold);
+            left: 5px;
+            position: relative;
+          }
+
+          .person {
+            color: red;
+            width: 170px;
+            font-size: 10px;
+          }
+
+          .description {
+            width: 170px;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+
+    .seeMore {
+      position: relative;
+      top: 60px;
+      align-items: center;
+      border-style: none;
+      min-width: 323.5px;
+      height: 50px;
+
+      @include desktop {
+        display: none;
+      }
+
+      .down {
+        position: relative;
+        top: 2px;
+        left: 5px;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+  footer {
+    @include flexcenter(column);
+
+    position: relative;
+    top: 20px;
+    width: 375px;
+
+    @include desktop {
+      height: 300px;
+      width: 100%;
+      top: 100px;
+    }
+
+    .black {
+      background: $text-color;
+      height: 194px;
+      width: 100%;
+      font-size: 24px;
+      color: $background-color;
+
+      @include desktop {
+        height: 150px;
+      }
+
+      .partner {
+        @include desktop {
+          width: 10%;
+          position: relative;
+          left: 40%;
+        }
+
+        small {
+          position: relative;
+          left: 150px;
+          top: 22px;
+          font-size: 24px;
+        }
+
+        hr {
+          position: relative;
+          left: 0;
+          background-color: $title-color;
+          height: 1px;
+          top: 22px;
+          width: 60px;
+          border-style: hidden;
+
+          @include desktop {
+            position: relative;
+            left: 115px;
+          }
+        }
+      }
+
+      .desktopfooter {
+        @include desktop {
+          height: 150px;
+
+          @include flexcenter(row);
+
+          top: 5px;
+          position: relative;
+          padding-left: 30%;
+        }
+      }
+
+      .mozilla {
+        position: relative;
+        top: 26px;
+
+        .moz {
+          margin-left: 40px;
+        }
+
+        .google {
+          margin-left: 40px;
+          color: #9a9898;
+        }
+
+        .naver {
+          margin-left: 40px;
+          color: #989696;
+          font-weight: weight(heavy);
+          font-family: $header-font-family;
+        }
+      }
+
+      .daumkakao {
+        position: relative;
+        top: 26px;
+        color: #9a9898;
+
+        @include desktop {
+          font-size: 24px;
+        }
+      }
+
+      .daum {
+        margin-left: 84px;
+
+        @include desktop {
+          margin-left: 40px;
+        }
+      }
+
+      .airbnb {
+        margin-left: 36px;
+
+        .bnb {
+          position: relative;
+          top: 6px;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    .creative {
+      @include desktop {
+        width: 100%;
+        height: 150px;
+        padding-top: 30px;
+      }
+
+      width: 100%;
+      font-size: 12px;
+
+      @include flexcenter(row);
+
+      height: 100px;
+
+      .create {
+        position: relative;
+        top: 28px;
+        margin-left: 40px;
+        font-size: 15px;
+        font-weight: weight(bold);
+        color: black;
+
+        @include desktop {
+          left: 20%;
+          font-size: 20px;
+          line-height: 20px;
+        }
+
+        line-height: 10px;
+
+        .copy {
+          position: relative;
+          top: 3px;
+          width: 15px;
+          height: 15px;
+
+          @include desktop {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      .create2 {
+        position: relative;
+        top: 30px;
+        left: 40px;
+
+        @include desktop {
+          left: 22%;
+          top: 40px;
+        }
+      }
+    }
+  }
+}
