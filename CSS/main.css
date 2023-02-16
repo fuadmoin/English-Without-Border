@@ -12,6 +12,38 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 12px;
 }
+body .hidden {
+  display: none;
+  width: 100%;
+  height: 666px;
+  background: rgb(204, 219, 199);
+  z-index: 999;
+  position: absolute;
+}
+body .hidden img {
+  right: 38px;
+  top: 33px;
+  position: absolute;
+}
+body .hidden-ul {
+  display: flex;
+  flex-direction: column;
+  top: 58px;
+  position: relative;
+}
+body .hidden-ul li {
+  list-style-type: none;
+  left: 40px;
+  margin-bottom: 10px;
+}
+body .hidden-ul li a {
+  color: #ec5242;
+  text-decoration: none;
+  font-family: "cocogoose", "sans-serif";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+}
 body .desktopnav {
   display: none;
   top: -7px;
@@ -116,6 +148,7 @@ body .desktopnav .logoGroup .resource {
   color: #ec5242;
 }
 body .main {
+  filter: blur(0);
   width: 291px;
   height: 434px;
   background-size: cover;
@@ -295,7 +328,9 @@ body .mainProgram .programs {
 }
 @media (min-width: 400px) and (max-width: 767px) {
   body .mainProgram .programs {
-    width: 100%;
+    width: 10%;
+    left: 18%;
+    position: relative;
   }
 }
 @media (min-width: 768px) {
@@ -326,7 +361,8 @@ body .mainProgram .programs .pink {
 }
 @media (min-width: 400px) and (max-width: 767px) {
   body .mainProgram .programs .pink {
-    width: 40px;
+    position: relative;
+    left: 145px;
   }
 }
 @media (min-width: 768px) {
@@ -433,6 +469,11 @@ body .mainProgram .programList .join {
     display: none;
   }
 }
+@media (min-width: 400px) and (max-width: 767px) {
+  body .mainProgram .programList .join {
+    left: 25%;
+  }
+}
 body .mainProgram .programList .seewhole {
   display: none;
   font-size: 14px;
@@ -509,6 +550,19 @@ body .featured .teachersName .pink {
     padding: 0;
     width: 40px;
     left: 100px;
+  }
+}
+body .featured #mainList2 {
+  display: none;
+}
+@media (min-width: 768px) {
+  body .featured #mainList2 {
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  body .featured #mainList {
+    display: none;
   }
 }
 body .featured .programList {
@@ -605,19 +659,29 @@ body .featured .seeMore .down {
   width: 15px;
   height: 15px;
 }
+body #article {
+  display: none;
+}
 body footer {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  display: none;
   position: relative;
   top: 20px;
   width: 375px;
+}
+@media (min-width: 400px) and (max-width: 767px) {
+  body footer {
+    width: 100%;
+  }
 }
 @media (min-width: 768px) {
   body footer {
     height: 300px;
     width: 100%;
     top: 100px;
+    display: flex;
   }
 }
 body footer .black {
@@ -639,6 +703,13 @@ body footer .black {
     left: 40%;
   }
 }
+@media (min-width: 400px) and (max-width: 767px) {
+  body footer .black .partner {
+    width: 10%;
+    position: relative;
+    left: 25%;
+  }
+}
 body footer .black .partner small {
   position: relative;
   left: 150px;
@@ -653,6 +724,12 @@ body footer .black .partner hr {
   top: 22px;
   width: 60px;
   border-style: hidden;
+}
+@media (min-width: 400px) and (max-width: 767px) {
+  body footer .black .partner hr {
+    position: relative;
+    left: 155px;
+  }
 }
 @media (min-width: 768px) {
   body footer .black .partner hr {
@@ -677,6 +754,13 @@ body footer .black .mozilla {
 }
 body footer .black .mozilla .moz {
   margin-left: 40px;
+}
+@media (min-width: 400px) and (max-width: 767px) {
+  body footer .black .mozilla .moz {
+    position: relative;
+    left: 20%;
+    margin-right: 20%;
+  }
 }
 body footer .black .mozilla .google {
   margin-left: 40px;
@@ -704,6 +788,13 @@ body footer .black .daum {
 @media (min-width: 768px) {
   body footer .black .daum {
     margin-left: 40px;
+  }
+}
+@media (min-width: 400px) and (max-width: 767px) {
+  body footer .black .daum {
+    position: relative;
+    left: 25%;
+    margin-right: 20%;
   }
 }
 body footer .black .airbnb {

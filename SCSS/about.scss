@@ -49,6 +49,43 @@ body {
   // background: #F7F7F7 ;
   color: #484648;
 
+  .hidden {
+    display: none;
+    width: 100%;
+    height: 666px;
+    background: rgb(204, 219, 199);
+    z-index: 999;
+    position: absolute;
+  }
+
+  .hidden img {
+    right: 38px;
+    top: 33px;
+    position: absolute;
+  }
+
+  .hidden-ul {
+    display: flex;
+    flex-direction: column;
+    top: 58px;
+    position: relative;
+  }
+
+  .hidden-ul li {
+    list-style-type: none;
+    left: 40px;
+    margin-bottom: 10px;
+  }
+
+  .hidden-ul li a {
+    color: $title-color;
+    text-decoration: none;
+    font-family: $header-font-family;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+  }
+
   .desktopnav {
     display: none;
     top: -7px;
@@ -176,6 +213,7 @@ body {
     position: relative;
     top: 0;
     color: $text-color;
+    filter: blur(0);
 
     @include flexcenter(column);
 
