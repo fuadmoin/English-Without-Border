@@ -12,11 +12,44 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 12px;
 }
+body .hidden {
+  display: none;
+  width: 100%;
+  height: 666px;
+  background: rgb(204, 219, 199);
+  z-index: 999;
+  position: absolute;
+}
+body .hidden img {
+  right: 38px;
+  top: 33px;
+  position: absolute;
+}
+body .hidden-ul {
+  display: flex;
+  flex-direction: column;
+  top: 58px;
+  position: relative;
+}
+body .hidden-ul li {
+  list-style-type: none;
+  left: 40px;
+  margin-bottom: 10px;
+}
+body .hidden-ul li a {
+  color: #ec5242;
+  text-decoration: none;
+  font-family: "cocogoose", "sans-serif";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+}
 body .desktopnav {
   display: none;
   top: -7px;
   position: relative;
   width: 100%;
+  min-width: 61rem;
   height: 100px;
 }
 @media (min-width: 768px) {
@@ -42,29 +75,32 @@ body .desktopnav .socialmedia a {
   text-decoration: none;
   color: white;
 }
-body .desktopnav .socialmedia .logout {
-  position: absolute;
-  right: 20%;
+body .desktopnav .socialmedia .upper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  position: relative;
+  right: 17%;
 }
-body .desktopnav .socialmedia .facebook {
-  position: absolute;
-  right: 520px;
+body .desktopnav .socialmedia .upper .logout {
+  position: relative;
 }
-body .desktopnav .socialmedia .facebook img {
-  background: white;
+body .desktopnav .socialmedia .upper .facebook {
+  position: r;
+  margin-right: 20px;
 }
-body .desktopnav .socialmedia .twitter {
-  position: absolute;
-  right: 490px;
-  top: 8px;
+body .desktopnav .socialmedia .upper .twitter {
+  position: relative;
+  top: 3px;
+  margin-right: 20px;
 }
-body .desktopnav .socialmedia .english {
-  position: absolute;
-  right: 425px;
+body .desktopnav .socialmedia .upper .english {
+  position: relative;
+  margin-right: 20px;
 }
-body .desktopnav .socialmedia .mypage {
-  position: absolute;
-  right: 360px;
+body .desktopnav .socialmedia .upper .mypage {
+  position: relative;
+  margin-right: 20px;
 }
 body .desktopnav .logoGroup {
   font-size: 15px;
@@ -83,39 +119,40 @@ body .desktopnav .logoGroup a {
 }
 body .desktopnav .logoGroup .logo {
   position: absolute;
-  left: 100px;
+  right: 70%;
   width: 100px;
   height: 50px;
 }
 body .desktopnav .logoGroup .about {
   position: absolute;
-  right: 1030px;
+  right: 66%;
 }
 body .desktopnav .logoGroup .program {
   position: absolute;
-  right: 880px;
+  right: 57%;
 }
 body .desktopnav .logoGroup .join {
   position: absolute;
-  right: 750px;
+  right: 49%;
 }
 body .desktopnav .logoGroup .sponsor {
   position: absolute;
-  right: 600px;
+  right: 41%;
 }
 body .desktopnav .logoGroup .news {
   position: absolute;
-  right: 460px;
+  right: 34%;
 }
 body .desktopnav .logoGroup .resource {
   position: absolute;
-  right: 250px;
+  right: 20%;
   width: 100px;
   height: 50px;
   border: solid 4px #ec5242;
   color: #ec5242;
 }
 body .main {
+  filter: blur(0);
   width: 291px;
   height: 434px;
   background-size: cover;
@@ -152,7 +189,7 @@ body .main .introduction .title {
   font-size: 22px;
   font-weight: 400;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .main .introduction .title {
     width: 77.6%;
   }
@@ -176,7 +213,7 @@ body .main .introduction .subtitle {
   text-align: start;
   font-family: "cocogoose", "sans-serif";
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .main .introduction .subtitle {
     width: 77.6%;
   }
@@ -202,7 +239,7 @@ body .main .content div {
   align-content: center;
   border: 3px solid white;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .main .content div {
     width: 77.6%;
   }
@@ -226,7 +263,7 @@ body .main .content .title {
   top: -50px;
   line-height: 25px;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .main .content .title {
     width: 77.6%;
   }
@@ -243,7 +280,7 @@ body .main .content .skill {
   top: -60px;
   font-size: 18px;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .main .content .skill {
     width: 77.6%;
   }
@@ -255,7 +292,7 @@ body .main .content .skill {
     left: 18%;
   }
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .main {
     width: 77.6%;
   }
@@ -264,7 +301,8 @@ body .main .content .skill {
   body .main {
     padding: 0;
     width: 100%;
-    height: 650px;
+    min-height: 650px;
+    min-width: 61rem;
   }
 }
 body .mainProgram {
@@ -278,7 +316,7 @@ body .mainProgram {
   align-items: flex-start;
   flex-direction: column;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .mainProgram {
     width: 77.6%;
   }
@@ -287,15 +325,18 @@ body .mainProgram {
   body .mainProgram {
     padding: 0;
     width: 100%;
+    min-width: 61rem;
     height: 550px;
   }
 }
 body .mainProgram .programs {
   top: 0;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .mainProgram .programs {
-    width: 100%;
+    width: 10%;
+    left: 18%;
+    position: relative;
   }
 }
 @media (min-width: 768px) {
@@ -324,9 +365,10 @@ body .mainProgram .programs .pink {
   top: -13px;
   border-style: hidden;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .mainProgram .programs .pink {
-    width: 40px;
+    position: relative;
+    left: 145px;
   }
 }
 @media (min-width: 768px) {
@@ -361,7 +403,7 @@ body .mainProgram .programList .list2 {
   align-items: flex-start;
   flex-direction: row;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .mainProgram .programList .list2 {
     max-height: 60px;
   }
@@ -374,7 +416,7 @@ body .mainProgram .programList .list2 {
     width: 100%;
     top: 75px;
     position: relative;
-    height: 170px;
+    height: 14rem;
     margin-right: 8px;
     align-items: center;
   }
@@ -431,6 +473,11 @@ body .mainProgram .programList .join {
 @media (min-width: 768px) {
   body .mainProgram .programList .join {
     display: none;
+  }
+}
+@media (min-width: 450px) and (max-width: 767px) {
+  body .mainProgram .programList .join {
+    left: 25%;
   }
 }
 body .mainProgram .programList .seewhole {
@@ -509,6 +556,19 @@ body .featured .teachersName .pink {
     padding: 0;
     width: 40px;
     left: 100px;
+  }
+}
+body .featured #mainList2 {
+  display: none;
+}
+@media (min-width: 768px) {
+  body .featured #mainList2 {
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  body .featured #mainList {
+    display: none;
   }
 }
 body .featured .programList {
@@ -605,19 +665,30 @@ body .featured .seeMore .down {
   width: 15px;
   height: 15px;
 }
+body #article {
+  display: none;
+}
 body footer {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  display: none;
   position: relative;
   top: 20px;
   width: 375px;
+}
+@media (min-width: 450px) and (max-width: 767px) {
+  body footer {
+    width: 100%;
+  }
 }
 @media (min-width: 768px) {
   body footer {
     height: 300px;
     width: 100%;
+    min-width: 61rem;
     top: 100px;
+    display: flex;
   }
 }
 body footer .black {
@@ -639,6 +710,13 @@ body footer .black {
     left: 40%;
   }
 }
+@media (min-width: 450px) and (max-width: 767px) {
+  body footer .black .partner {
+    width: 10%;
+    position: relative;
+    left: 25%;
+  }
+}
 body footer .black .partner small {
   position: relative;
   left: 150px;
@@ -653,6 +731,12 @@ body footer .black .partner hr {
   top: 22px;
   width: 60px;
   border-style: hidden;
+}
+@media (min-width: 450px) and (max-width: 767px) {
+  body footer .black .partner hr {
+    position: relative;
+    left: 155px;
+  }
 }
 @media (min-width: 768px) {
   body footer .black .partner hr {
@@ -677,6 +761,13 @@ body footer .black .mozilla {
 }
 body footer .black .mozilla .moz {
   margin-left: 40px;
+}
+@media (min-width: 450px) and (max-width: 767px) {
+  body footer .black .mozilla .moz {
+    position: relative;
+    left: 20%;
+    margin-right: 20%;
+  }
 }
 body footer .black .mozilla .google {
   margin-left: 40px;
@@ -704,6 +795,13 @@ body footer .black .daum {
 @media (min-width: 768px) {
   body footer .black .daum {
     margin-left: 40px;
+  }
+}
+@media (min-width: 450px) and (max-width: 767px) {
+  body footer .black .daum {
+    position: relative;
+    left: 25%;
+    margin-right: 20%;
   }
 }
 body footer .black .airbnb {

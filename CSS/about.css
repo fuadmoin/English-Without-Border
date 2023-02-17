@@ -13,11 +13,44 @@ body {
   font-size: 12px;
   color: #484648;
 }
+body .hidden {
+  display: none;
+  width: 100%;
+  height: 666px;
+  background: rgb(204, 219, 199);
+  z-index: 999;
+  position: absolute;
+}
+body .hidden img {
+  right: 38px;
+  top: 33px;
+  position: absolute;
+}
+body .hidden-ul {
+  display: flex;
+  flex-direction: column;
+  top: 58px;
+  position: relative;
+}
+body .hidden-ul li {
+  list-style-type: none;
+  left: 40px;
+  margin-bottom: 10px;
+}
+body .hidden-ul li a {
+  color: #ec5242;
+  text-decoration: none;
+  font-family: "cocogoose", "sans-serif";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+}
 body .desktopnav {
   display: none;
   top: -7px;
   position: relative;
   width: 100%;
+  min-width: 61rem;
   height: 100px;
 }
 @media (min-width: 768px) {
@@ -43,29 +76,32 @@ body .desktopnav .socialmedia a {
   text-decoration: none;
   color: white;
 }
-body .desktopnav .socialmedia .logout {
-  position: absolute;
-  right: 20%;
+body .desktopnav .socialmedia .upper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  position: relative;
+  right: 17%;
 }
-body .desktopnav .socialmedia .facebook {
-  position: absolute;
-  right: 520px;
+body .desktopnav .socialmedia .upper .logout {
+  position: relative;
 }
-body .desktopnav .socialmedia .facebook img {
-  background: white;
+body .desktopnav .socialmedia .upper .facebook {
+  position: r;
+  margin-right: 20px;
 }
-body .desktopnav .socialmedia .twitter {
-  position: absolute;
-  right: 490px;
-  top: 8px;
+body .desktopnav .socialmedia .upper .twitter {
+  position: relative;
+  top: 3px;
+  margin-right: 20px;
 }
-body .desktopnav .socialmedia .english {
-  position: absolute;
-  right: 425px;
+body .desktopnav .socialmedia .upper .english {
+  position: relative;
+  margin-right: 20px;
 }
-body .desktopnav .socialmedia .mypage {
-  position: absolute;
-  right: 360px;
+body .desktopnav .socialmedia .upper .mypage {
+  position: relative;
+  margin-right: 20px;
 }
 body .desktopnav .logoGroup {
   font-size: 15px;
@@ -84,34 +120,33 @@ body .desktopnav .logoGroup a {
 }
 body .desktopnav .logoGroup .logo {
   position: absolute;
-  left: 100px;
+  right: 70%;
   width: 100px;
   height: 50px;
 }
 body .desktopnav .logoGroup .about {
   position: absolute;
-  right: 1030px;
-  color: #ec5242;
+  right: 66%;
 }
 body .desktopnav .logoGroup .program {
   position: absolute;
-  right: 880px;
+  right: 57%;
 }
 body .desktopnav .logoGroup .join {
   position: absolute;
-  right: 750px;
+  right: 49%;
 }
 body .desktopnav .logoGroup .sponsor {
   position: absolute;
-  right: 600px;
+  right: 41%;
 }
 body .desktopnav .logoGroup .news {
   position: absolute;
-  right: 460px;
+  right: 34%;
 }
 body .desktopnav .logoGroup .resource {
   position: absolute;
-  right: 250px;
+  right: 20%;
   width: 100px;
   height: 50px;
   border: solid 4px #ec5242;
@@ -124,6 +159,7 @@ body .main {
   position: relative;
   top: 0;
   color: #272a31;
+  filter: blur(0);
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -157,7 +193,7 @@ body .main .introduction .title {
   font-weight: 400;
   text-align: center;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .main .introduction .title {
     width: 77.6%;
   }
@@ -176,14 +212,14 @@ body .main .introduction .subtitle {
   font-family: "cocogoose", "sans-serif";
   width: 291px;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .main .introduction .subtitle {
     width: 77.6%;
   }
 }
 @media (min-width: 768px) {
   body .main .introduction .subtitle {
-    width: 77.6%;
+    width: 70.6%;
     font-size: 45px;
     line-height: 50px;
     top: 50px;
@@ -220,15 +256,15 @@ body .main .content .descriptioncontainer {
   width: 291px;
   border: 1px solid rgb(197, 194, 194);
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .main .content .descriptioncontainer {
     width: 77.6%;
   }
 }
 @media (min-width: 768px) {
   body .main .content .descriptioncontainer {
-    width: 50%;
-    left: 20%;
+    width: 70%;
+    left: 10%;
     top: 0;
   }
 }
@@ -253,7 +289,7 @@ body .main .content .titlecontainer {
   width: 252px;
   text-align: center;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .main .content .titlecontainer {
     width: 77.6%;
   }
@@ -281,7 +317,7 @@ body .main .content .titlecontainer .hrline {
   top: -20px;
   height: 1px;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .main {
     max-height: 380px;
     width: 77.6%;
@@ -291,6 +327,7 @@ body .main .content .titlecontainer .hrline {
   body .main {
     padding: 0;
     width: 100%;
+    min-width: 61rem;
     height: 560px;
   }
 }
@@ -298,7 +335,7 @@ body .seepast {
   width: 335px;
   padding: 20px;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .seepast {
     width: 89.34%;
   }
@@ -308,6 +345,7 @@ body .seepast {
     width: 100%;
     height: 710px;
     padding: 20px 0 0 0;
+    min-width: 61rem;
   }
 }
 body .seepast .content {
@@ -316,7 +354,7 @@ body .seepast .content {
   align-items: flex-start;
   flex-direction: column;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .seepast .content {
     width: 88%;
   }
@@ -335,7 +373,7 @@ body .seepast .content .commons {
   left: 25%;
   text-align: center;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .seepast .content .commons {
     width: 53.34%;
   }
@@ -368,7 +406,7 @@ body .seepast .content .descrption {
   top: -10px;
   text-align: center;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .seepast .content .descrption {
     width: 69.34%;
   }
@@ -400,7 +438,7 @@ body .seepast .content .imagecontainer {
   position: relative;
   top: 10px;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .seepast .content .imagecontainer {
     width: 65.34%;
   }
@@ -414,7 +452,7 @@ body .seepast .content .imagecontainer img {
   width: 245px;
   height: 100px;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .seepast .content .imagecontainer img {
     width: 100%;
   }
@@ -440,7 +478,7 @@ body .seepast .past {
   position: relative;
   top: 30px;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .seepast .past {
     width: 84%;
   }
@@ -482,7 +520,7 @@ body .seepast .past .imgdescription {
   width: 305px;
   text-align: center;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .seepast .past .imgdescription {
     width: 81.34%;
   }
@@ -491,6 +529,13 @@ body .seepast .past .imgdescription {
   body .seepast .past .imgdescription {
     left: 50%;
     width: 81.34%;
+  }
+}
+@media (min-width: 768px) {
+  body .seepast .past .responsiveDesktop {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
   }
 }
 body .seepast .past .career {
@@ -505,7 +550,7 @@ body .seepast .past .career {
   flex-direction: column;
   color: white;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .seepast .past .career {
     width: 84%;
     left: 10%;
@@ -513,7 +558,7 @@ body .seepast .past .career {
 }
 @media (min-width: 768px) {
   body .seepast .past .career {
-    left: 50%;
+    left: 30%;
   }
 }
 body .seepast .past .career .coursetitle {
@@ -541,7 +586,7 @@ body .seepast .past .Perfectly {
   flex-direction: column;
   color: white;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body .seepast .past .Perfectly {
     width: 84%;
     left: 10%;
@@ -549,8 +594,8 @@ body .seepast .past .Perfectly {
 }
 @media (min-width: 768px) {
   body .seepast .past .Perfectly {
-    left: 92%;
-    top: -162px;
+    left: 32%;
+    top: 18px;
   }
 }
 body .seepast .past .Perfectly .coursetitle {
@@ -574,7 +619,7 @@ body footer {
   top: 50px;
   width: 375px;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body footer {
     width: 100%;
   }
@@ -582,6 +627,7 @@ body footer {
 @media (min-width: 768px) {
   body footer {
     width: 100%;
+    min-width: 61rem;
   }
 }
 body footer .black {
@@ -596,16 +642,18 @@ body footer .black {
     display: none;
   }
 }
+@media (min-width: 450px) and (max-width: 767px) {
+  body footer .black .partner {
+    width: 10%;
+    position: relative;
+    left: 25%;
+  }
+}
 body footer .black .partner small {
   position: relative;
   left: 150px;
   top: 22px;
   font-size: 24px;
-}
-@media (min-width: 400px) and (max-width: 767px) {
-  body footer .black .partner small {
-    left: 40%;
-  }
 }
 body footer .black .partner hr {
   position: relative;
@@ -616,9 +664,10 @@ body footer .black .partner hr {
   width: 60px;
   border-style: hidden;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body footer .black .partner hr {
-    left: -4.7%;
+    position: relative;
+    left: 155px;
   }
 }
 body footer .black .mozilla {
@@ -628,30 +677,22 @@ body footer .black .mozilla {
 body footer .black .mozilla .moz {
   margin-left: 40px;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body footer .black .mozilla .moz {
-    margin-left: 18.67%;
+    position: relative;
+    left: 20%;
+    margin-right: 20%;
   }
 }
 body footer .black .mozilla .google {
   margin-left: 40px;
   color: #9a9898;
 }
-@media (min-width: 400px) and (max-width: 767px) {
-  body footer .black .mozilla .google {
-    margin-left: 18.67%;
-  }
-}
 body footer .black .mozilla .naver {
   margin-left: 40px;
   color: #989696;
   font-weight: 900;
   font-family: "cocogoose", "sans-serif";
-}
-@media (min-width: 400px) and (max-width: 767px) {
-  body footer .black .mozilla .naver {
-    margin-left: 18.67%;
-  }
 }
 body footer .black .daumkakao {
   position: relative;
@@ -662,15 +703,17 @@ body footer .black .daumkakao {
 body footer .black .daum {
   margin-left: 84px;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body footer .black .daum {
-    margin-left: 32.4%;
+    position: relative;
+    left: 25%;
+    margin-right: 20%;
   }
 }
 body footer .black .airbnb {
   margin-left: 36px;
 }
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   body footer .black .airbnb {
     margin-left: 9.6%;
   }

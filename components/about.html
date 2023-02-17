@@ -10,15 +10,22 @@
   <body>
     <nav class="desktopnav">
       <div class="socialmedia">
-        <a class="facebook" href="">
-          <img src="../img/facebook.png" alt="a link to facebook" />
-        </a>
-        <a class="twitter" href="https://twitter.com/Fuad01804580">
-          <img src="../img/twitter.png" alt="a link to twitter" />
-        </a>
-        <a class="english">English</a>
-        <a class="mypage" href="">My Page</a>
-        <a class="logout">Logout</a>
+        <div class="upper">
+          <a tabindex="0" class="facebook" href="">
+            <img src="../img/facebook.png" alt="a link to facebook" />
+          </a>
+          <a class="twitter" href="https://twitter.com/Fuad01804580">
+            <img src="../img/twitter.png" alt="a link to twitter" />
+          </a>
+          <a tabindex="0" class="english">English</a>
+          <a
+            tabindex="0"
+            class="mypage"
+            href="https://fuadmoin.github.io/English-Without-Border/"
+            >My Page</a
+          >
+          <a tabindex="0" class="logout">Logout</a>
+        </div>
       </div>
       <div class="logoGroup">
         <a href="../index.html" class="logo">
@@ -29,33 +36,47 @@
           />
         </a>
         <a class="about" href="./about.html">About</a>
-        <a class="program">Program</a>
-        <a class="join">Join</a>
-        <a class="sponsor">Sponsor</a>
-        <a class="news">News</a>
-        <button type="button" class="resource">Resource</button>
+        <a tabindex="0" class="program">Program</a>
+        <a tabindex="0" class="join">Join</a>
+        <a tabindex="0" class="sponsor">Sponsor</a>
+        <a tabindex="0" class="news">News</a>
+        <button tabindex="0" type="button" class="resource">Resource</button>
       </div>
+    </nav>
+    <nav class="hidden">
+      <img id="close" src="../img/close.png" />
+      <ul class="hidden-ul">
+        <li><a id="about" href="../index.html">Home</a></li>
+
+        <li><a>Program</a></li>
+
+        <li><a>Join</a></li>
+        <li><a>Sponsor</a></li>
+        <li><a>News</a></li>
+      </ul>
     </nav>
     <section class="main">
       <nav class="navigation">
-        <img class="menu" src="../img/humberger.png" alt="menu" />
+        <img id="option" class="menu" src="../img/humberger.png" alt="menu" />
       </nav>
 
       <header class="introduction">
-        <h1 class="title">"Hello! Students"</h1>
-        <h2 class="subtitle">Welcome to English Without Borders.</h2>
+        <h1 tabindex="0" class="title">"Hello! Students"</h1>
+        <h2 tabindex="0" class="subtitle">
+          Welcome to English Without Borders.
+        </h2>
         <hr class="pink" />
       </header>
       <main class="content">
         <div class="descriptioncontainer">
-          <p class="description">
+          <p tabindex="0" class="description">
             This is a free online school for all students around the world, to
             learn English from the comfort of their own home. The website offers
             a variety of courses, from beginner to advanced levels, and provides
             students with the tools and resources they need to become proficient
             in the English language.
           </p>
-          <p class="discription2">
+          <p tabindex="0" class="discription2">
             English withoutborder is an online English teaching website that
             provides students with the opportunity to learn English from the
             comfort of their own home. The website offers a variety of courses,
@@ -71,24 +92,24 @@
           </p>
         </div>
         <div class="titlecontainer">
-          <p class="title">
+          <p tabindex="0" class="title">
             Please contact us per Email for any further questions about English
             Without Borders.
           </p>
-          <p class="skill">Fuadamoin@gmail.com</p>
+          <p tabindex="0" class="skill">Fuadamoin@gmail.com</p>
           <hr class="hrline" />
         </div>
       </main>
     </section>
     <section class="seepast">
       <article class="content">
-        <p class="commons">English Without Borders Website Logo</p>
+        <p tabindex="0" class="commons">English Without Borders Website Logo</p>
         <hr class="pink" />
-        <p class="descrption">
+        <p tabindex="0" class="descrption">
           The logo of cc global summit was decided through the logo competition
           from some day in.
         </p>
-        <p class="descrption2">
+        <p tabindex="0" class="descrption2">
           The logo of cc global summit was decided through the logo competition
           from 8, June to 7, July. After online public voting and section
           committee's judging process, the logo from Naresh Agrawal won the
@@ -98,6 +119,7 @@
         </p>
         <div class="imagecontainer">
           <img
+            tabindex="0"
             src="../img/Borderslogo.png"
             alt="logo of English without border"
           />
@@ -105,58 +127,62 @@
       </article>
       <hr class="divider" />
       <article class="past">
-        <h3 class="title2">See the other two courses we give</h3>
+        <h3 tabindex="0" class="title2">See the other two courses we give</h3>
         <hr class="pink" />
-        <p class="imgdescription">
+        <p tabindex="0" class="imgdescription">
           Take a look at the other two courses that are available in this
           website.
         </p>
-        <div class="career">
-          <small class="coursetitle">Carrier Development</small>
-          <small class="coursesubtitle"
-            >Learn the english language for job searching, the interview process
-            and the job application.
-          </small>
-        </div>
-        <div class="Perfectly">
-          <small class="coursetitle">Perfectly Spoken</small>
-          <small class="coursesubtitle"
-            >This course will help you to communicate common everyday english
-            with native speakers in natural way
-          </small>
+        <div class="responsiveDesktop">
+          <div class="career">
+            <small tabindex="0" class="coursetitle">Carrier Development</small>
+            <small tabindex="0" class="coursesubtitle"
+              >Learn the english language for job searching, the interview
+              process and the job application.
+            </small>
+          </div>
+          <div class="Perfectly">
+            <small tabindex="0" class="coursetitle">Perfectly Spoken</small>
+            <small tabindex="0" class="coursesubtitle"
+              >This course will help you to communicate common everyday english
+              with native speakers in natural way
+            </small>
+          </div>
         </div>
       </article>
     </section>
     <footer>
       <div class="black">
         <div class="partner">
-          <small>partner</small>
+          <small tabindex="0">partner</small>
           <hr />
         </div>
         <div class="mozilla">
-          <small class="moz">mozilla</small>
-          <small class="google">Google</small>
-          <samll class="naver">NAVER</samll>
+          <small tabindex="0" class="moz">mozilla</small>
+          <small tabindex="0" class="google">Google</small>
+          <samll tabindex="0" class="naver">NAVER</samll>
         </div>
         <div class="daumkakao">
-          <small class="daum">daumkakao</small>
-          <small class="airbnb">
+          <small tabindex="0" class="daum">daumkakao</small>
+          <small tabindex="0" class="airbnb">
             <img class="bnb" src="../img/airbnb.png" alt="" />
             airbnb
           </small>
         </div>
       </div>
       <div class="creative">
-        <small class="create">
+        <small tabindex="0" class="create">
           <img class="copy" src="../img/cc.png" alt="" />
           creative <br />
           commons korea
         </small>
-        <small class="create2"
+        <small tabindex="0" class="create2"
           >2015 Creative Commons Korea <br />
           Some Rights Reserved</small
         >
       </div>
     </footer>
+
+    <script src="../js/main.js"></script>
   </body>
 </html>

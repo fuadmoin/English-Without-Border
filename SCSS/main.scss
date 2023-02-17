@@ -32,7 +32,7 @@ $font-weights: (
 }
 
 @mixin tablet {
-  @media (min-width: 400px) and (max-width: 767px) {
+  @media (min-width: 450px) and (max-width: 767px) {
     @content;
   }
 }
@@ -47,6 +47,43 @@ body {
   font-family: $text-font-family;
   font-size: 12px;
 
+  .hidden {
+    display: none;
+    width: 100%;
+    height: 666px;
+    background: rgb(204, 219, 199);
+    z-index: 999;
+    position: absolute;
+  }
+
+  .hidden img {
+    right: 38px;
+    top: 33px;
+    position: absolute;
+  }
+
+  .hidden-ul {
+    display: flex;
+    flex-direction: column;
+    top: 58px;
+    position: relative;
+  }
+
+  .hidden-ul li {
+    list-style-type: none;
+    left: 40px;
+    margin-bottom: 10px;
+  }
+
+  .hidden-ul li a {
+    color: $title-color;
+    text-decoration: none;
+    font-family: $header-font-family;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+  }
+
   .desktopnav {
     display: none;
     top: -7px;
@@ -57,6 +94,7 @@ body {
     }
 
     width: 100%;
+    min-width: 61rem;
     height: 100px;
 
     .socialmedia {
@@ -76,34 +114,36 @@ body {
         color: white;
       }
 
-      .logout {
-        position: absolute;
-        right: 20%;
-      }
+      .upper {
+        @include flexcenter(row);
 
-      .facebook {
-        position: absolute;
-        right: 520px;
+        position: relative;
+        right: 17%;
 
-        img {
-          background: white;
+        .logout {
+          position: relative;
         }
-      }
 
-      .twitter {
-        position: absolute;
-        right: 490px;
-        top: 8px;
-      }
+        .facebook {
+          position: r;
+          margin-right: 20px;
+        }
 
-      .english {
-        position: absolute;
-        right: 425px;
-      }
+        .twitter {
+          position: relative;
+          top: 3px;
+          margin-right: 20px;
+        }
 
-      .mypage {
-        position: absolute;
-        right: 360px;
+        .english {
+          position: relative;
+          margin-right: 20px;
+        }
+
+        .mypage {
+          position: relative;
+          margin-right: 20px;
+        }
       }
     }
 
@@ -125,39 +165,39 @@ body {
 
       .logo {
         position: absolute;
-        left: 100px;
+        right: 70%;
         width: 100px;
         height: 50px;
       }
 
       .about {
         position: absolute;
-        right: 1030px;
+        right: 66%;
       }
 
       .program {
         position: absolute;
-        right: 880px;
+        right: 57%;
       }
 
       .join {
         position: absolute;
-        right: 750px;
+        right: 49%;
       }
 
       .sponsor {
         position: absolute;
-        right: 600px;
+        right: 41%;
       }
 
       .news {
         position: absolute;
-        right: 460px;
+        right: 34%;
       }
 
       .resource {
         position: absolute;
-        right: 250px;
+        right: 20%;
         width: 100px;
         height: 50px;
         border: solid 4px #ec5242;
@@ -167,6 +207,7 @@ body {
   }
 
   .main {
+    filter: blur(0);
     width: 291px;
     height: 434px;
     background-size: cover;
@@ -319,7 +360,8 @@ body {
     @include desktop() {
       padding: 0;
       width: 100%;
-      height: 650px;
+      min-height: 650px;
+      min-width: 61rem;
     }
   }
 
@@ -340,6 +382,7 @@ body {
     @include desktop() {
       padding: 0;
       width: 100%;
+      min-width: 61rem;
       height: 550px;
     }
 
@@ -349,7 +392,9 @@ body {
       top: 0;
 
       @include tablet {
-        width: 100%;
+        width: 10%;
+        left: 18%;
+        position: relative;
       }
 
       @include desktop {
@@ -383,7 +428,8 @@ body {
         border-style: hidden;
 
         @include tablet {
-          width: 40px;
+          position: relative;
+          left: 145px;
         }
 
         @include desktop {
@@ -425,11 +471,9 @@ body {
           @include flexcenter(column);
 
           width: 100%;
-
-          // background: rgba(255,255,255,.05);
           top: 75px;
           position: relative;
-          height: 170px;
+          height: 14rem;
           margin-right: 8px;
           align-items: center;
         }
@@ -490,6 +534,10 @@ body {
         @include desktop {
           display: none;
         }
+
+        @include tablet {
+          left: 25%;
+        }
       }
 
       .seewhole {
@@ -543,7 +591,9 @@ body {
 
     .teachersName {
       @include tablet {
-        // width: 100%;
+        //  width: 10%;
+        //  position: relative;
+        //  left: 40%;
       }
 
       @include desktop {
@@ -570,7 +620,8 @@ body {
 
       .pink {
         @include tablet {
-          // width: 100%;
+
+          //   left: 10px;
         }
 
         @include desktop {
@@ -585,6 +636,20 @@ body {
         height: 1px;
         top: -13px;
         border-style: hidden;
+      }
+    }
+
+    #mainList2 {
+      display: none;
+
+      @include desktop {
+        display: flex;
+      }
+    }
+
+    #mainList {
+      @include desktop {
+        display: none;
       }
     }
 
@@ -686,17 +751,28 @@ body {
     }
   }
 
+  #article {
+    display: none;
+  }
+
   footer {
     @include flexcenter(column);
 
+    display: none;
     position: relative;
     top: 20px;
     width: 375px;
 
+    @include tablet {
+      width: 100%;
+    }
+
     @include desktop {
       height: 300px;
       width: 100%;
+      min-width: 61rem;
       top: 100px;
+      display: flex;
     }
 
     .black {
@@ -717,6 +793,12 @@ body {
           left: 40%;
         }
 
+        @include tablet {
+          width: 10%;
+          position: relative;
+          left: 25%;
+        }
+
         small {
           position: relative;
           left: 150px;
@@ -732,6 +814,11 @@ body {
           top: 22px;
           width: 60px;
           border-style: hidden;
+
+          @include tablet {
+            position: relative;
+            left: 155px;
+          }
 
           @include desktop {
             position: relative;
@@ -758,6 +845,12 @@ body {
 
         .moz {
           margin-left: 40px;
+
+          @include tablet {
+            position: relative;
+            left: 20%;
+            margin-right: 20%;
+          }
         }
 
         .google {
@@ -788,6 +881,12 @@ body {
 
         @include desktop {
           margin-left: 40px;
+        }
+
+        @include tablet {
+          position: relative;
+          left: 25%;
+          margin-right: 20%;
         }
       }
 
