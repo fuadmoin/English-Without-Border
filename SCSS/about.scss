@@ -32,7 +32,7 @@ $font-weights: (
 }
 
 @mixin tablet {
-  @media (min-width: 400px) and (max-width: 767px) {
+  @media (min-width: 450px) and (max-width: 767px) {
     @content;
   }
 }
@@ -96,6 +96,7 @@ body {
     }
 
     width: 100%;
+    min-width: 61rem;
     height: 100px;
 
     .socialmedia {
@@ -115,34 +116,43 @@ body {
         color: white;
       }
 
-      .logout {
-        position: absolute;
-        right: 20%;
-      }
+      .upper {
+        @include flexcenter(row);
 
-      .facebook {
-        position: absolute;
-        right: 520px;
+        position: relative;
+        right: 17%;
 
-        img {
-          background: white;
+
+
+        .logout {
+          position: relative;
+          // right: 20%;
         }
-      }
 
-      .twitter {
-        position: absolute;
-        right: 490px;
-        top: 8px;
-      }
+        .facebook {
+          position: r;
+          // right: 33%;
+          margin-right: 20px;
+        }
 
-      .english {
-        position: absolute;
-        right: 425px;
-      }
+        .twitter {
+          position: relative;
+          // right: 31%;
+          top: 3px;
+          margin-right: 20px;
+        }
 
-      .mypage {
-        position: absolute;
-        right: 360px;
+        .english {
+          position: relative;
+          // right: 27%;
+          margin-right: 20px;
+        }
+
+        .mypage {
+          position: relative;
+          // right: 23%;
+          margin-right: 20px;
+        }
       }
     }
 
@@ -164,40 +174,39 @@ body {
 
       .logo {
         position: absolute;
-        left: 100px;
+        right: 70%;
         width: 100px;
         height: 50px;
       }
 
       .about {
         position: absolute;
-        right: 1030px;
-        color: #ec5242;
+        right: 66%;
       }
 
       .program {
         position: absolute;
-        right: 880px;
+        right: 57%;
       }
 
       .join {
         position: absolute;
-        right: 750px;
+        right: 49%;
       }
 
       .sponsor {
         position: absolute;
-        right: 600px;
+        right: 41%;
       }
 
       .news {
         position: absolute;
-        right: 460px;
+        right: 34%;
       }
 
       .resource {
         position: absolute;
-        right: 250px;
+        right: 20%;
         width: 100px;
         height: 50px;
         border: solid 4px #ec5242;
@@ -271,7 +280,7 @@ body {
         }
 
         @include desktop() {
-          width: 77.6%;
+          width: 70.6%;
           font-size: 45px;
           line-height: 50px;
           top: 50px;
@@ -315,8 +324,8 @@ body {
         }
 
         @include desktop() {
-          width: 50%;
-          left: 20%;
+          width: 70%;
+          left: 10%;
           top: 0;
         }
 
@@ -382,6 +391,7 @@ body {
     @include desktop() {
       padding: 0;
       width: 100%;
+      min-width: 61rem;
       height: 560px;
     }
   }
@@ -398,6 +408,7 @@ body {
       width: 100%;
       height: 710px;
       padding: 20px 0 0 0;
+      min-width: 61rem;
     }
 
     padding: 20px;
@@ -582,6 +593,12 @@ body {
         text-align: center;
       }
 
+      .responsiveDesktop {
+        @include desktop {
+          @include flexcenter(row);
+        }
+      }
+
       .career {
         background: linear-gradient(0deg, rgba(203, 5, 5, 0.5), rgba(152, 6, 6, 0.5)), url(../img/carrier.png);
         background-size: cover;
@@ -595,7 +612,7 @@ body {
         }
 
         @include desktop {
-          left: 50%;
+          left: 30%;
         }
 
         top: 18px;
@@ -632,8 +649,8 @@ body {
         }
 
         @include desktop {
-          left: 92%;
-          top: -162px;
+          left: 32%;
+          top: 18px;
         }
 
         position: relative;
@@ -674,6 +691,7 @@ body {
 
     @include desktop {
       width: 100%;
+      min-width: 61rem;
     }
 
     .black {
@@ -689,14 +707,15 @@ body {
       color: $background-color;
 
       .partner {
+        @include tablet {
+          width: 10%;
+          position: relative;
+          left: 25%;
+        }
+
         small {
           position: relative;
           left: 150px;
-
-          @include tablet {
-            left: 40%;
-          }
-
           top: 22px;
           font-size: 24px;
         }
@@ -706,7 +725,8 @@ body {
           left: 0;
 
           @include tablet {
-            left: -4.7%;
+            position: relative;
+            left: 155px;
           }
 
           background-color: $title-color;
@@ -725,27 +745,19 @@ body {
           margin-left: 40px;
 
           @include tablet {
-            margin-left: 18.67%;
+            position: relative;
+            left: 20%;
+            margin-right: 20%;
           }
         }
 
         .google {
           margin-left: 40px;
-
-          @include tablet {
-            margin-left: 18.67%;
-          }
-
           color: #9a9898;
         }
 
         .naver {
           margin-left: 40px;
-
-          @include tablet {
-            margin-left: 18.67%;
-          }
-
           color: #989696;
           font-weight: weight(heavy);
           font-family: $header-font-family;
@@ -763,7 +775,9 @@ body {
         margin-left: 84px;
 
         @include tablet {
-          margin-left: 32.4%;
+          position: relative;
+          left: 25%;
+          margin-right: 20%;
         }
       }
 
