@@ -32,7 +32,7 @@
 
 # 📖 English Without Borders <a name="about-project"></a>
 
-**English Without Borders** is a demo for a free online website that can be available for all students around the world .
+**English Without Borders** is a demo for a free online website that connects learners with native and certified English tutors from around the world. You can choose teachers based on your goals. You can also access different interactive learning materials. Whether you want to improve your speaking, writing, grammar, or vocabulary, English Without Borders can help you find the perfect tutor for your needs.
 
 ## 🛠 Built With <a name="built-with"></a>
 
