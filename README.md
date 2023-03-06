@@ -42,15 +42,15 @@ HTML, JavaScript and CSS
 
 ### Key Features <a name="key-features"></a>
 
-- **[html styled with sass]**
-- **[some google fonts]**
-- **[mobile and desktop version are available ]**
+- **[HTML styled with sass]**
+- **[Some google fonts]**
+- **[Mobile and desktop versions are available]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"> </a>
 
-> click the link below to chekout the website.
+> Click the link below to check out the website.
 
 - [Live Demo Link](https://fuadmoin.github.io/English-Without-Border/)
 
