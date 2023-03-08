@@ -558,7 +558,7 @@ body .seepast .past .career {
 }
 @media (min-width: 768px) {
   body .seepast .past .career {
-    left: 30%;
+    left: 50%;
   }
 }
 body .seepast .past .career .coursetitle {
@@ -594,7 +594,7 @@ body .seepast .past .Perfectly {
 }
 @media (min-width: 768px) {
   body .seepast .past .Perfectly {
-    left: 32%;
+    left: 52%;
     top: 18px;
   }
 }
